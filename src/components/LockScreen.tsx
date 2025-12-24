@@ -97,7 +97,7 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
         </RetroWindow>
       </div>
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
           10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
@@ -106,7 +106,7 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
         .animate-shake {
           animation: shake 0.5s;
         }
-      `}</style>
+      `}} />
     </div>
   );
 };
