@@ -1,6 +1,6 @@
 import React from 'react';
 const ScrollbarStyles = () => {
-  return <style jsx global>{`
+  return <style dangerouslySetInnerHTML={{__html: `
       /* Hide scrollbar for Chrome, Safari and Opera */
       ::-webkit-scrollbar {
         display: none;
@@ -16,6 +16,6 @@ const ScrollbarStyles = () => {
       .overflow-auto {
         overflow: auto;
       }
-    `}</style>;
+    `}} />;
 };
 export default ScrollbarStyles;
