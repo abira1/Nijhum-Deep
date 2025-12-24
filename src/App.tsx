@@ -84,10 +84,15 @@ export function App() {
     setIsLoading(false);
   };
 
+  const handleUnlock = () => {
+    setIsUnlocked(true);
+  };
+
   return <>
       <ScrollbarStyles />
       <LoadingScreen onLoadingComplete={handleLoadingComplete} />
-      {!isLoading && <BrowserRouter>
+      {!isLoading && !isUnlocked && <LockScreen onUnlock={handleUnlock} />}
+      {!isLoading && isUnlocked && <BrowserRouter>
           <AuthProvider>
             <AppWrapper />
           </AuthProvider>
