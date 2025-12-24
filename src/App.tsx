@@ -17,6 +17,12 @@ export function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
   useEffect(() => {
+    // Check if database is already unlocked
+    const unlocked = localStorage.getItem('nijhum_dip_unlocked');
+    if (unlocked === 'true') {
+      setIsUnlocked(true);
+    }
+
     // Initialize PWA capabilities
     initializePWA();
   }, []);
