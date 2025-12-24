@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import LoadingScreen from './components/LoadingScreen';
+import LockScreen from './components/LockScreen';
 import ScrollbarStyles from './components/ui/ScrollbarStyles';
 import { AuthProvider } from './context/AuthContext';
 import AppWrapper from './components/AppWrapper';
@@ -13,6 +14,7 @@ import edgeCaseHandler from './services/edgeCaseHandler';
 export function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isOfflineReady, setIsOfflineReady] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(false);
 
   useEffect(() => {
     // Initialize PWA capabilities
