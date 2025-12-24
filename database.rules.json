@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "members": {
+      ".indexOn": ["name", "timestamp"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "meals": {
+      ".indexOn": ["memberId", "date", "type", "timestamp"],
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$mealId": {
+        ".validate": "newData.hasChildren(['memberId', 'date', 'type']) && newData.child('date').isString() && newData.child('type').isString() && (newData.child('type').val() == 'lunch' || newData.child('type').val() == 'dinner')"
+      }
+    },
+    "expenses": {
+      ".indexOn": ["memberId", "date", "timestamp"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}

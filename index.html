@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/C16GZhpN/90719560792.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nijhum Dip - Meal & Expense Tracker</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="background-color" content="#f0f0f0" />
+    <meta name="display" content="standalone" />
+    <meta name="orientation" content="portrait-primary" />
+
+    <!-- App Description -->
+    <meta name="description" content="A retro-styled digital solution to manage your daily meals, bazar expenses, and monthly calculations with ease." />
+    <meta name="keywords" content="meal tracker, expense tracker, bachelor meal management, nijhum dip" />
+    <meta name="author" content="Nijhum Dip Team" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nijhum Dip - Meal & Expense Tracker" />
+    <meta property="og:description" content="A retro-styled digital solution to manage your daily meals, bazar expenses, and monthly calculations with ease." />
+    <meta property="og:image" content="https://i.postimg.cc/C16GZhpN/90719560792.png" />
+    <meta property="og:url" content="https://nijhum-dip.web.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nijhum Dip - Meal & Expense Tracker" />
+    <meta name="twitter:description" content="A retro-styled digital solution to manage your daily meals, bazar expenses, and monthly calculations with ease." />
+    <meta name="twitter:image" content="https://i.postimg.cc/C16GZhpN/90719560792.png" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
+
+    <!-- Apple Mobile Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nijhum Dip" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/icons/icon-192.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preload" href="/src/index.tsx" as="script" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>🏝️ Nijhum Dip</h1>
+        <p>This application requires JavaScript to run.</p>
+        <p>Please enable JavaScript in your browser and refresh the page.</p>
+      </div>
+    </noscript>
+  </body>
+</html>
